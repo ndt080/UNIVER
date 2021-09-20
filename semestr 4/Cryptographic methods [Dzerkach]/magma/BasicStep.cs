@@ -1,0 +1,83 @@
+﻿using System;
+
+namespace magma
+{
+    internal struct BasicStep
+    {
+        private uint _n1, _n2;
+        private readonly uint _x;
+
+        private static readonly byte[] Table =
+        {
+            0x4, 0x2, 0xF, 0x5, 0x9, 0x1, 0x0, 0x8, 0xE, 0x3, 0xB, 0xC, 0xD, 0x7, 0xA, 0x6,
+            0xC, 0x9, 0xF, 0xE, 0x8, 0x1, 0x3, 0xA, 0x2, 0x7, 0x4, 0xD, 0x6, 0x0, 0xB, 0x5,
+            0xD, 0x8, 0xE, 0xC, 0x7, 0x3, 0x9, 0xA, 0x1, 0x5, 0x2, 0x4, 0x6, 0xF, 0x0, 0xB,
+            0xE, 0x9, 0xB, 0x2, 0x5, 0xF, 0x7, 0x1, 0x0, 0xD, 0xC, 0x6, 0xA, 0x4, 0x3, 0x8,
+            0x3, 0xE, 0x5, 0x9, 0x6, 0x8, 0x0, 0xD, 0xA, 0xB, 0x7, 0xC, 0x2, 0x1, 0xF, 0x4,
+            0x8, 0xF, 0x6, 0xB, 0x1, 0x9, 0xC, 0x5, 0xD, 0x3, 0x7, 0xA, 0x0, 0xE, 0x2, 0x4,
+            0x9, 0xB, 0xC, 0x0, 0x3, 0x6, 0x7, 0x5, 0x4, 0x8, 0xE, 0xF, 0x1, 0xA, 0x2, 0xD,
+            0xC, 0x6, 0x5, 0x2, 0xB, 0x0, 0x9, 0xD, 0x3, 0xE, 0x7, 0xA, 0xF, 0x4, 0x1, 0x8
+        };
+
+        public BasicStep(ulong dateFragment, uint keyFragment)
+        {
+            _n1 = (uint) (dateFragment >> 32);
+            _n2 = (uint) ((dateFragment << 32) >> 32);
+            _x = keyFragment;
+        }
+
+        public ulong BasicEncrypt(bool isLastStep)
+        {
+            return (FourthAndFifthStep(isLastStep, ThirdStep(SecondStep(FirstStep()))));
+        }
+
+        private uint FirstStep()
+        {
+            return (uint) ((_x + _n1) % (Convert.ToUInt64(Math.Pow(2, 32))));
+        }
+
+        private static uint SecondStep(uint s)
+        {
+            var s0 = s >> 28;
+            var s1 = (s << 4) >> 28;
+            var s2 = (s << 8) >> 28;
+            var s3 = (s << 12) >> 28;
+            var s4 = (s << 16) >> 28;
+            var s5 = (s << 20) >> 28;
+            var s6 = (s << 24) >> 28;
+            var s7 = (s << 28) >> 28;
+
+            s0 = Table[s0];
+            s1 = Table[0x10 + s1];
+            s2 = Table[0x20 + s2];
+            s3 = Table[0x30 + s3];
+            s4 = Table[0x40 + s4];
+            s5 = Table[0x50 + s5];
+            s6 = Table[0x60 + s6];
+            s7 = Table[0x70 + s7];
+
+            return s7 + (s6 << 4) + (s5 << 8) + (s4 << 12) + (s3 << 16) + (s2 << 20) + (s1 << 24) + (s0 << 28);
+        }
+
+        private static uint ThirdStep(uint s)
+        {
+            return (uint) (s << 11) | (s >> 21);
+        }
+
+        private ulong FourthAndFifthStep(bool isLastStep, uint s)
+        {
+            s = (s ^ _n2);
+            if (!isLastStep)
+            {
+                _n2 = _n1;
+                _n1 = s;
+            }
+            else
+            {
+                _n2 = s;
+            }
+
+            return ((ulong) _n2) | (((ulong) _n1) << 32);
+        }
+    }
+}
