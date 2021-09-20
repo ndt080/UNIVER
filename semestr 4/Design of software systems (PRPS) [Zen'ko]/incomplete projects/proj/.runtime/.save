@@ -1,0 +1,10 @@
+#Sat Mar 06 19:21:08 MSK 2021
+org.modelio.app.diagram.editor.OpenedDiagrams4='business' {387955d9-7a06-4384-914d-dcff7e867fdb} Standard.UseCaseDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams3='info_about_publish' {0193f6f0-6776-4fc0-95af-0c62376e96b5} Standard.UseCaseDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams2='publish' {8ae77bb4-f696-427f-a599-3191c237b807} Standard.UseCaseDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams1='Duplicate' {e6611904-99b4-4cd4-9287-b47ca7ea505b} Standard.UseCaseDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams0='Bibl' {dd71f783-c6f0-4720-80cb-2a6d27d902cf} Standard.UseCaseDiagram
+org.modelio.app.module.propertytab.JavaDesigner\ v3.10.00\ GModule\ @file\:///C\:/Users/andre/.modelio/4.1/modules/JavaDesigner_3.10.00/JavaDesigner_3.10.00.jmdac\ runtime\ module_.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.JavaDesigner\ v3.10.00\ GModule\ @file\:///C\:/Users/andre/.modelio/4.1/modules/JavaDesigner_3.10.00/JavaDesigner_3.10.00.jmdac\ runtime\ module_.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.app.module.propertytab.JavaDesigner\ v3.10.00\ GModule\ @file\:///C\:/Users/andre/.modelio/4.1/modules/JavaDesigner_3.10.00/JavaDesigner_3.10.00.jmdac\ runtime\ module_.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.app.module.propertytab.JavaDesigner\ v3.10.00\ GModule\ @file\:///C\:/Users/andre/.modelio/4.1/modules/JavaDesigner_3.10.00/JavaDesigner_3.10.00.jmdac\ runtime\ module_.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts

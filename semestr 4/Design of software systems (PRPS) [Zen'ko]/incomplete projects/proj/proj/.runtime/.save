@@ -1,0 +1,9 @@
+#Sat Apr 10 09:38:30 MSK 2021
+org.modelio.app.diagram.editor.OpenedDiagrams5='AddPublish sequence diagram' {6ecb8b8c-7a2e-4d5e-94b6-33d4de766c1e} Standard.SequenceDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams4='Addpublish object diagram' {9606b0cc-d281-4667-846b-12e88c1abfde} Standard.ObjectDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams3='Registration class diagram' {ba2be6e4-ea68-428e-bbed-3471f36b5805} Standard.ClassDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams2='Login class diagram' {334b9178-d8da-4fb0-a2b2-39fe77106d1f} Standard.ClassDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams1='AddPublish class diagram' {59ac05de-e229-4d9d-a223-cfd06db5cc49} Standard.ClassDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams0='Common class diagram' {7b8c53f1-7719-448d-a393-4551e7da8713} Standard.ClassDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams7='Login sequence diagram' {26e38b02-d291-4797-a177-2bdc48a821ef} Standard.SequenceDiagram
+org.modelio.app.diagram.editor.OpenedDiagrams6='GetPublishList sequence diagram' {64d20ce3-ef62-4ff8-b267-09e566634acd} Standard.SequenceDiagram

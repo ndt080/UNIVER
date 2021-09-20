@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="База данных" version="4">
+  <OBJECT>
+    <ID name="База данных" mc="Standard.Actor" uid="ceaeff9a-ee42-44cd-adda-6e9ca63b0d87"/>
+    <PID name="lab1" mc="Standard.Package" uid="d642c61d-fbb3-4fc0-bc3b-f7ca5a06a831"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[База данных]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

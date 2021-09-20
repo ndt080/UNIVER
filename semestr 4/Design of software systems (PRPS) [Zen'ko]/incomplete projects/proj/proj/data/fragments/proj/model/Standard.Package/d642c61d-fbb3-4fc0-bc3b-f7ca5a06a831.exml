@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="lab1" version="4">
+  <OBJECT>
+    <ID name="lab1" mc="Standard.Package" uid="d642c61d-fbb3-4fc0-bc3b-f7ca5a06a831"/>
+    <PID name="proj" mc="Standard.Project" uid="880f45a0-5668-412f-abd5-f62e7a32272a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[lab1]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Автор" mc="Standard.Actor" uid="2833a1b9-7b1d-4523-9c4b-4d9bad543623"/>
+        <COMPID name="Пользователь системы" mc="Standard.Actor" uid="369598fc-65c8-41da-9d6f-50eaf5b4a2f1"/>
+        <COMPID name="Оператор системы" mc="Standard.Actor" uid="baa5f7f3-11d6-4ef4-996d-a8b45318d7e7"/>
+        <COMPID name="Издательство" mc="Standard.Actor" uid="89b9f493-b3e1-4dc8-aa52-cf126ac9d33c"/>
+        <COMPID name="База данных" mc="Standard.Actor" uid="ceaeff9a-ee42-44cd-adda-6e9ca63b0d87"/>
+        <COMPID name="Добавить данные о публикации" mc="Standard.UseCase" uid="291e58ce-c5f1-439b-b2a8-2ca566fb7b7c"/>
+        <COMPID name="Работа с дублями" mc="Standard.UseCase" uid="0f880539-9098-485d-b91b-6e2583cd674d"/>
+        <COMPID name="Войти в систему" mc="Standard.UseCase" uid="e0c0e836-c0db-42db-818f-4a01e42ede5c"/>
+        <COMPID name="Зарегистрироваться в системе" mc="Standard.UseCase" uid="cffbafef-022b-43ba-9a49-976898ae3aec"/>
+        <COMPID name="Получить информацию о своих публикациях" mc="Standard.UseCase" uid="35532f15-7c2f-4993-b179-5f40d31ccdba"/>
+        <COMPID name="Отправить сведения о публикации" mc="Standard.UseCase" uid="f313482a-a150-4b51-8aa8-12a684f57f7e"/>
+        <COMPID name="Разрешение неоднозначности" mc="Standard.UseCase" uid="72282cd3-9518-4be8-8221-d24a62731ec0"/>
+        <COMPID name="Добавить сведения о цитировании" mc="Standard.UseCase" uid="72f0f621-2ee8-4ce8-a0d2-436a12d48d29"/>
+        <COMPID name="Поиск дублей" mc="Standard.UseCase" uid="6d5066ea-1247-4111-ba40-31f9797f2923"/>
+        <COMPID name="Вывод возможных дублей" mc="Standard.UseCase" uid="ea510117-234e-45a6-b9c9-ff511eca0a5b"/>
+        <COMPID name="Удаление дублей" mc="Standard.UseCase" uid="13518678-4ac5-4d36-82ee-95ae70c7d4f8"/>
+        <COMPID name="указать имя файла" mc="Standard.UseCase" uid="bd437c30-c192-4f4d-8237-7946ae1077ae"/>
+        <COMPID name="Отправить сведения" mc="Standard.UseCase" uid="3911b50e-2a5d-497d-ac41-8685b187cfcc"/>
+        <COMPID name="Считать и ввести данные" mc="Standard.UseCase" uid="c38263e5-0bbd-4655-abfc-be95329d438c"/>
+        <COMPID name="Связать публикацию и автора" mc="Standard.UseCase" uid="4655b658-6b8a-47ed-a91e-18b7d8ef1667"/>
+        <COMPID name="Получить информацию о публикации" mc="Standard.UseCase" uid="aaffbe66-8808-4a1c-83dc-991f4b869e77"/>
+        <COMPID name="Получить индекс цитирования" mc="Standard.UseCase" uid="44e056c3-f76d-4807-ab53-920efdc4bcd9"/>
+        <COMPID name="Разрешить неоднозначность" mc="Standard.UseCase" uid="80d528b0-8de9-4547-92a5-91349059bef0"/>
+        <COMPID name="Дать сведения о цитировании" mc="Standard.UseCase" uid="ffae856f-c4c8-4c16-81dc-3c88037af955"/>
+        <COMPID name="Внесение изменений в систему" mc="Standard.UseCase" uid="aaad6d06-e10a-4d10-8087-345303f64bae"/>
+        <COMPID name="Организация хранения и обработки сведений" mc="Standard.Actor" uid="29b493f7-0300-432e-a127-eeed1bf9811a"/>
+        <COMPID name="Получить список своих публикаций" mc="Standard.UseCase" uid="2a24d760-17a9-4237-8baf-68795652f561"/>
+        <COMPID name="Получить индекс своего цитирования" mc="Standard.UseCase" uid="d312ee91-8b3f-4c88-993c-8fc86bedb622"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Bibl" mc="Standard.UseCaseDiagram" uid="d348bc93-fa5e-4083-ba9f-40b9b0c46065"/>
+        <COMPID name="Duplicate" mc="Standard.UseCaseDiagram" uid="c0abef43-e70f-473e-bf38-bebdfaa947de"/>
+        <COMPID name="publish" mc="Standard.UseCaseDiagram" uid="fd3a77cd-1d77-44f5-87f8-17f61847d366"/>
+        <COMPID name="info_about_publish" mc="Standard.UseCaseDiagram" uid="97ad5859-2591-44d1-80eb-af037c39813c"/>
+        <COMPID name="business" mc="Standard.UseCaseDiagram" uid="71adbd1b-82d7-4ea9-af63-25e220cde283"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

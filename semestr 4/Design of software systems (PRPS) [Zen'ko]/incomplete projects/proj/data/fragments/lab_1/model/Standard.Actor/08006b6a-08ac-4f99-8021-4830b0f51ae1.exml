@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Организация хранения и обработки сведений" version="4">
+  <OBJECT>
+    <ID name="Организация хранения и обработки сведений" mc="Standard.Actor" uid="08006b6a-08ac-4f99-8021-4830b0f51ae1"/>
+    <PID name="lab_1" mc="Standard.Package" uid="ac4a11ef-e0aa-4625-8754-d834930c5493"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Организация хранения и обработки сведений]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

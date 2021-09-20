@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="lab" version="4">
+  <OBJECT>
+    <ID name="lab" mc="Standard.Project" uid="151f1953-7bc2-4ea6-9276-f5db7f15b2c5"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[lab]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="lab" mc="Standard.Package" uid="ff8eed31-647d-4553-935d-b5387dcbc738"/>
+        <COMPID name="lab1" mc="Standard.Package" uid="b0bdec6f-18ff-4221-9f90-e9ae622b20b7"/>
+        <COMPID name="lab2" mc="Standard.Package" uid="b9b505a2-14ca-461d-9638-d8ee878d5c87"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="lab" mc="Infrastructure.DiagramSet" uid="2f594905-5c63-4947-9cff-c52bee98825f"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

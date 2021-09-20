@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="lab2" version="4">
+  <OBJECT>
+    <ID name="lab2" mc="Standard.Package" uid="49812b0c-e78a-4fe3-816b-608b7dd5f97b"/>
+    <PID name="proj" mc="Standard.Project" uid="880f45a0-5668-412f-abd5-f62e7a32272a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[lab2]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Activity" mc="Standard.Activity" uid="cc641645-d9e2-4a5d-b3be-9a1bd05d7337"/>
+        <COMPID name="Activity1" mc="Standard.Activity" uid="27209260-e1ef-4ffc-8ba8-1d63434e45eb"/>
+        <COMPID name="Activity2" mc="Standard.Activity" uid="0c215509-d7c8-42aa-a3b7-8fd501616af6"/>
+        <COMPID name="State Machine" mc="Standard.StateMachine" uid="3faf74f8-16f3-4c9e-b0f2-8ef4038a1815"/>
+        <COMPID name="State Machine1" mc="Standard.StateMachine" uid="48722789-e4c3-44a3-a3e9-39f605b434b2"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
