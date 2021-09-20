@@ -1,0 +1,4 @@
+3 4 5 Versatile
+4 4 4 Equilateral
+2 3 3 Isosceles
+69 50 20 Versatile
