@@ -1,0 +1,44 @@
+<div>
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label for="inputDB" class="form-label">Enter the absolute path to your database: </label>
+      <input type="text"
+             class="form-control"
+             [value]="dataSource"
+             id="inputDB"
+             formControlName="file"
+             aria-describedby="inputDBHelp">
+    </div>
+    <button type="button" class="btn btn-primary"
+            (click)="connectDB()"
+            [disabled]="fileControl.invalid && !fileControl.touched"
+    >Connect
+    </button>
+
+    <ng-container *ngIf="!!tables">
+      <div class="form__inputBox">
+        <label for="selectTable" class="form-label">Select table: </label>
+        <div class="row">
+          <div class="col mb-3">
+            <select class="form-control"
+                    id="selectTable"
+                    formControlName="selectTable"
+                    aria-describedby="selectTableHelp">
+              <option *ngFor="let table of tables" [value]="table">{{table.toUpperCase()}}</option>
+            </select>
+          </div>
+          <div class="col mb-3">
+            <button type="button" class="form-control btn btn-primary"
+                    (click)="selectTable()"
+                    [disabled]="selectTableControl.invalid && !selectTableControl.touched"
+            >Select table</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="!!dataTable">
+      <data-view [data]="dataTable" [saving]="true" [tableName]="selectTableControl.value"></data-view>
+    </ng-container>
+  </form>
+</div>

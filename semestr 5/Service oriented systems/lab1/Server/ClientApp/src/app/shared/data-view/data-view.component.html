@@ -1,0 +1,15 @@
+<ng-container *ngIf="isEdited">
+  <button type="button" class="btn btn-warning" (click)="savingChanges()">
+    Saving changes
+  </button>
+</ng-container>
+<ag-grid-angular
+  #agGrid
+  style="width: 100%; height: 500px;"
+  class="ag-theme-material"
+  [rowData]="bodyTable"
+  [columnDefs]="headerTable"
+  rowSelection="multiple"
+  (cellValueChanged)="isEdited = true"
+>
+</ag-grid-angular>
