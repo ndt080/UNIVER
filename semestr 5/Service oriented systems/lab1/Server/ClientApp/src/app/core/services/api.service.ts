@@ -40,13 +40,43 @@ export class ApiService {
     );
   }
 
-  setTableData(table: [any], tableName: string): Observable<any> {
-    return this.http.get<string>(
+  getTableDataWithQuery(query: string): Observable<any> {
+    return this.http.get<boolean>(
       this.url +
-      "Api/SetTableData?" +
+      "Api/GetTableDataWithQuery?" +
+      `connectionString=${this.connectionString}` + "&"+
+      `query=${query}`
+    );
+  }
+
+  updateTableData(table: any, tableName: string): Observable<any> {
+    return this.http.get(
+      this.url +
+      "Api/UpdateTableData?" +
       `connectionString=${this.connectionString}&`+
-      `tableName=${table}&` +
-      `tableData=${JSON.stringify(table)}`
+      `tableName=${tableName}&` +
+      `tableData=${JSON.stringify(table)}`, {}
+    );
+  }
+
+  insertTableData(table: any, tableName: string): Observable<any> {
+    return this.http.get(
+      this.url +
+      "Api/InsertTableData?" +
+      `connectionString=${this.connectionString}&`+
+      `tableName=${tableName}&` +
+      `tableData=${JSON.stringify(table)}`, {}
+    );
+  }
+
+  deleteRow(column: string, rowID: string, tableName: string): Observable<any> {
+    return this.http.delete(
+      this.url +
+      "Api/DeleteRow?" +
+      `connectionString=${this.connectionString}&`+
+      `tableName=${tableName}&` +
+      `column=${column}&` +
+      `rowId=${rowID}`, {}
     );
   }
 }

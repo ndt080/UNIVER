@@ -15,17 +15,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   private destroy = new Subject();
   public dataSource: string;
   public tables: Array<string>;
+  public refresh = false;
   dataTable;
 
   fileControl = new FormControl("", [
     Validators.required,
     Validators.minLength(5),
   ]);
-
+  queryControl = new FormControl("", [
+    Validators.required,
+    Validators.minLength(10),
+  ]);
   selectTableControl = new FormControl("", [Validators.required]);
 
   form: FormGroup = new FormGroup({
     file: this.fileControl,
+    query: this.queryControl,
     selectTable: this.selectTableControl,
   });
 
@@ -42,6 +47,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.dataSource = this.fileControl.value;
       });
     this.dataSource = this.storage.dataSourceConnection;
+  }
+
+  refreshTable() {
+    this.refresh = true;
+    // this.selectTable();
+    setTimeout(() => {
+      this.refresh = false;
+    }, 1000);
   }
 
   connectDB() {
@@ -67,7 +80,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.api.getTableData(this.selectTableControl.value).subscribe(
       (x) => {
         this.dataTable = x;
-        console.log(x);
         this.notification.showSuccess(
           `Success get table ${this.selectTableControl.value}!`,
           ""
@@ -78,6 +90,24 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.notification.showError(error, "Error!");
       }
     );
+    this.refreshTable();
+  }
+
+  executeQuery(){
+    this.api.getTableDataWithQuery(this.queryControl.value).subscribe(
+      (x) => {
+        this.dataTable = x;
+        this.notification.showSuccess(
+          `Success execute the SQL query!`,
+          ""
+        );
+      },
+      (error) => {
+        console.log(error);
+        this.notification.showError(error.error, "Error!");
+      }
+    );
+    this.refreshTable();
   }
 
   ngOnDestroy() {

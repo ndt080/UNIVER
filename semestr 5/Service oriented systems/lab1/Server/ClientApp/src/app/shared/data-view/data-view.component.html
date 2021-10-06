@@ -1,8 +1,17 @@
-<ng-container *ngIf="isEdited">
-  <button type="button" class="btn btn-warning" (click)="savingChanges()">
-    Saving changes
+<div class="btn-group" role="group" style="margin-top: 20px">
+  <button type="button" class="btn btn-success" (click)="onAddRow()">
+    Add row
   </button>
-</ng-container>
+  <button type="button" class="btn btn-danger" (click)="onDeleteRow()">
+    Delete selected row
+  </button>
+  <ng-container *ngIf="isEdited">
+    <button type="button" class="btn btn-warning" (click)="savingChanges()">
+      Saving changes
+    </button>
+  </ng-container>
+</div>
+
 <ag-grid-angular
   #agGrid
   style="width: 100%; height: 500px;"
@@ -10,6 +19,7 @@
   [rowData]="bodyTable"
   [columnDefs]="headerTable"
   rowSelection="multiple"
-  (cellValueChanged)="isEdited = true"
+  enableRangeSelection="true"
+  (cellValueChanged)="cellValueChanged($event)"
 >
 </ag-grid-angular>
