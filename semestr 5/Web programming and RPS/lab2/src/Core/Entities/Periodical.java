@@ -1,11 +1,12 @@
-package Entities;
+package Core.Entities;
 
+import java.io.*;
 import java.util.Objects;
 
 /**
  * Class Periodical publication
  */
-public abstract class Periodical {
+public abstract class Periodical implements Serializable {
     /**
      * Name periodical publication
      */
@@ -13,7 +14,7 @@ public abstract class Periodical {
     /**
      * Coast periodical publication
      */
-    private int coast;
+    private double coast;
     /**
      * Is the publication printed?
      */
@@ -34,7 +35,7 @@ public abstract class Periodical {
      * @param electronicEdition Is the electronic printed?
      * @param officialMassMedia Is the official mass media?
      */
-    protected Periodical(String name, int coast, boolean printEdition, boolean electronicEdition, boolean officialMassMedia) {
+    protected Periodical(String name, double coast, boolean printEdition, boolean electronicEdition, boolean officialMassMedia) {
         this.name = name;
         this.coast = coast;
         this.printEdition = printEdition;
@@ -59,14 +60,14 @@ public abstract class Periodical {
     /**
      * @return get coast periodical publication
      */
-    public int getCoast() {
+    public double getCoast() {
         return coast;
     }
 
     /**
      * @param coast set coast periodical publication
      */
-    public void setCoast(int coast) {
+    public void setCoast(Double coast) {
         this.coast = coast;
     }
 
@@ -144,5 +145,25 @@ public abstract class Periodical {
                 ", electronicEdition=" + electronicEdition +
                 ", officialMassMedia=" + officialMassMedia +
                 '}';
+    }
+
+    @Serial
+    private void writeObject(ObjectOutputStream out)
+            throws IOException {
+        out.writeObject(getName());
+        out.writeObject(getCoast());
+        out.writeObject(isPrintEdition());
+        out.writeObject(isElectronicEdition());
+        out.writeObject(isOfficialMassMedia());
+    }
+
+    @Serial
+    private void readObject(ObjectInputStream in)
+            throws IOException, ClassNotFoundException {
+        this.setName((String) in.readObject());
+        this.setCoast((double) in.readObject());
+        this.setPrintEdition((boolean) in.readObject());
+        this.setElectronicEdition((boolean) in.readObject());
+        this.setOfficialMassMedia((boolean) in.readObject());
     }
 }
