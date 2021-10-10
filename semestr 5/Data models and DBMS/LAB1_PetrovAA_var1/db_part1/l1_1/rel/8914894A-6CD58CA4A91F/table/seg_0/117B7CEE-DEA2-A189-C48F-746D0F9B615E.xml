@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="117B7CEE-DEA2-A189-C48F-746D0F9B615E" name="Job">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>195AEE9D-ADD9-2213-4C6F-C729A0B0A6F9</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="5D7C4267-1B3C-087D-DE5D-BFA49EE16470">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>FFFE1CD1-5DE9-4F38-0DE5-D3166ED60FE8</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="BB6AF336-4D8B-BF34-B4BD-99EC5597A871">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>0DB32A5E-9549-3E01-0B22-50AE42B66AD3</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB3EB514-9FEC-3B4D-342E-DC4EC12FF48B" name="Job_PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>74EB7181-66ED-E14A-25B4-649F546D1FB1</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D7C4267-1B3C-087D-DE5D-BFA49EE16470"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

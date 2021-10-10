@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="195AEE9D-ADD9-2213-4C6F-C729A0B0A6F9" name="Job">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:15:08 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="FFFE1CD1-5DE9-4F38-0DE5-D3166ED60FE8">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:21:09 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="0DB32A5E-9549-3E01-0B22-50AE42B66AD3">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:21:16 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="74EB7181-66ED-E14A-25B4-649F546D1FB1" name="Job PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:28:57 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FFFE1CD1-5DE9-4F38-0DE5-D3166ED60FE8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

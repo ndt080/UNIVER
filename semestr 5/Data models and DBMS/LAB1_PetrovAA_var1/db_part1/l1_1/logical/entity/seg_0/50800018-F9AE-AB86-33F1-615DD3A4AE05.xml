@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="50800018-F9AE-AB86-33F1-615DD3A4AE05" name="Employeev1">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:37:57 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="badge number" id="BD15F8BD-EF01-ABE9-5AD5-FDE7A1820445">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:38:07 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="first name" id="3F23D31B-D6C8-29FF-4CDE-926CB6924A22">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:38:16 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="job" id="12217391-CA0D-208E-EBDC-9F503B6129FC">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:38:31 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salary" id="336DB20C-C1DF-AB60-4C4D-E147B6EDA2C7">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:38:46 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="budget" id="470D0B72-FE70-9B51-CFD1-495A86975959">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:39:08 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bonus plan" id="ECDC4EEA-A572-993A-BEEF-BD5D86622A61">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:39:20 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="car plan" id="4643D1CB-89B6-0032-C24E-25B5E01C65A6">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:39:35 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="badge number1" id="FD16C02D-FA87-75BA-9F48-D52D01DB98B3">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:40:13 UTC</createdTime>
+<generatorID>984445BC-F443-78E7-412D-936DC379AE2E</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>BD15F8BD-EF01-ABE9-5AD5-FDE7A1820445</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B195598-F9B0-F7B4-81E3-8ED84A5A55CB" name="Employee PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:38:12 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BD15F8BD-EF01-ABE9-5AD5-FDE7A1820445</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="43F78DAA-C5E0-6E50-AAB0-0D55F7B4E42F" name="director">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>7AABF213-6488-4EE7-6890-F6BEB138AA59</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="badge_number" id="0E0E57FB-3595-BD3F-24E5-2407F70E160F">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>D0DDD626-5F03-DD8C-828C-2588D0C1C70C</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="52316162-CA4C-F6BC-2D16-8FEDC4B50631">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>F4DF8308-A4BA-7C95-F7F5-1506E190A9B0</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salary" id="0BE5D298-6EDA-A8E7-0026-A45B079EE484">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>0DE9BCDD-BC68-79FE-303A-D56E76E745F6</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bonus_plan" id="FF8DD029-5473-84BE-3AFB-78AB929DEAE5">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>C4F96B6E-46EC-45CA-8018-EE981AB886D7</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="President_badge_number" id="24E5944F-9DC4-EAB5-8954-AB98B9AAED5B">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>6FD40C8D-A65E-83B8-B324-45BA0C6440E3</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="978AC2EE-FA02-7905-9AB8-9FFB3EA8F6F0" referredColumn="BA273C4D-DC06-1A4F-5C9B-1EA56CB60F4D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="78F55FA7-7140-E1D5-D191-72915F9C238C" name="director_PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>F035F5F6-465B-4B1D-D6B3-275B5C1ED7E6</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E0E57FB-3595-BD3F-24E5-2407F70E160F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="185024EE-78FB-C6FA-85E6-D5F6E8C91A82" name="director_President_FK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>6A874344-0060-5DF7-8D2E-772CA5CD6E68</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24E5944F-9DC4-EAB5-8954-AB98B9AAED5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F28EDF0F-BD38-465C-AD9B-3C7C0AD3A92F" name="In_house_training">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>76F1FD45-C67E-EB49-C734-072B68F5E09D</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6B4B7976-2926-0921-CC19-0FA56265E8F4">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>A819FC36-4617-1B2A-F1B3-F95FA43B5AF4</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="first_name" id="C5270323-784D-3192-7F11-44FC32DD84BF">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>A84DB6F5-8F40-12DF-8936-42B0DA986FDB</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="last_name" id="F2387DE9-71F3-9D09-455A-E0417C6C28BA">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>E08AE2DA-BB28-C89E-F9E2-D9905C899324</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E25423DC-C6DF-E5F5-24C4-D9B931847A08" name="In_house_training_PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>DF8DA528-4A15-13C6-26CC-1DC14B7B1679</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6B4B7976-2926-0921-CC19-0FA56265E8F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

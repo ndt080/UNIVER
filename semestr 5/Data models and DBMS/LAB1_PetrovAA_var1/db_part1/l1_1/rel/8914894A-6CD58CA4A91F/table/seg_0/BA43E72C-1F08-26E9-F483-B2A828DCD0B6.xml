@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA43E72C-1F08-26E9-F483-B2A828DCD0B6" name="Training_event">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>5D9E7387-9DB8-A9E4-1489-BB91739DFA67</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="E1DC3555-6F6C-080E-D84A-202048AB1A21">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>08249F82-86CC-C53C-875C-AE4C85CE33E9</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Date" id="91488787-4E9E-2E13-D9D7-0AF94686F565">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>E96475E7-259D-F88F-17C1-35C57698F84D</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="F95A1173-7BCD-23FF-8BF3-4C63BE807984">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>582C9B20-929E-CDCF-4533-E53AB1CB0260</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="In_house_training_id" id="3E0E1345-3CBA-5BFA-2CC5-261F55B9FFD8">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>524AEBC5-81B9-F027-00A7-A004851BC9B2</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37A63E20-A6D6-C460-3235-8EF277B60980" referredColumn="6B4B7976-2926-0921-CC19-0FA56265E8F4"/>
+</associations>
+</Column>
+<Column name="Training_company_id" id="71E9AE42-B040-7F3C-CEC6-4F20F8E9B2CC">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>6643792B-BB35-4C59-1294-239FF202E0A7</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7471C34E-34AE-E999-7369-0C0EABFD0273" referredColumn="FC1100CD-7054-0EB8-46A8-958233EC56E5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D61AA31-4553-334A-17DD-7D2E7FE0104A" name="Training_event_PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>5418410D-CD56-2904-311D-DDA5AAA8BA0A</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1DC3555-6F6C-080E-D84A-202048AB1A21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D3B42229-C3E0-129F-FBB4-7E5FA42C2EC0" name="Training_event_In_house_training_FK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>95CD321F-74D2-B52E-A51C-420259FAC099</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E0E1345-3CBA-5BFA-2CC5-261F55B9FFD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80DE3499-F634-C03E-ECF7-AAC3F31E8A50" name="Training_event_Training_company_FK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 09:41:29 UTC</createdTime>
+<generatorID>65885A60-E345-9F5F-4AB4-4FEA79A8C8DC</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71E9AE42-B040-7F3C-CEC6-4F20F8E9B2CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

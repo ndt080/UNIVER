@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5D9E7387-9DB8-A9E4-1489-BB91739DFA67" name="Training event">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:39:36 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="08249F82-86CC-C53C-875C-AE4C85CE33E9">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:39:52 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Date" id="E96475E7-259D-F88F-17C1-35C57698F84D">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:39:58 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="582C9B20-929E-CDCF-4533-E53AB1CB0260">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:40:05 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="524AEBC5-81B9-F027-00A7-A004851BC9B2">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:48:37 UTC</createdTime>
+<generatorID>95CD321F-74D2-B52E-A51C-420259FAC099</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<referedAttribute>A819FC36-4617-1B2A-F1B3-F95FA43B5AF4</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id2" id="6643792B-BB35-4C59-1294-239FF202E0A7">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:48:46 UTC</createdTime>
+<generatorID>65885A60-E345-9F5F-4AB4-4FEA79A8C8DC</generatorID>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<referedAttribute>2F8DBFA7-6827-CB89-4B34-D0018CA3B651</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5418410D-CD56-2904-311D-DDA5AAA8BA0A" name="Training event PK">
+<createdBy>User</createdBy>
+<createdTime>2021-09-13 08:39:54 UTC</createdTime>
+<ownerDesignName>l1_1</ownerDesignName>
+<engineerTo>
+<item key="8914894A-ABB2-0B49-23BC-6CD58CA4A91F" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>08249F82-86CC-C53C-875C-AE4C85CE33E9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
