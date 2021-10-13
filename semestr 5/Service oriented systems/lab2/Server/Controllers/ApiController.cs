@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Domain.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WcfServiceReference;
 
 namespace Server.Controllers
 {
@@ -12,11 +13,13 @@ namespace Server.Controllers
     {
         private readonly ISqlWorkService _service;
         private readonly ILogger<ApiController> _logger;
+        private readonly WcfServiceReference.WcfServiceClient _client;
 
         public ApiController(ILogger<ApiController> logger, ISqlWorkService service)
         {
             _logger = logger;
             _service = service;
+            _client = new WcfServiceReference.WcfServiceClient();
         }
 
         [HttpGet]
@@ -25,7 +28,8 @@ namespace Server.Controllers
         {
             try
             {
-                var output = await _service.GetAllTables(connectionString);
+                var output = await _client.GetAllTablesAsync(connectionString);
+
                 if (output == null)
                 {
                     return NotFound();
@@ -50,7 +54,7 @@ namespace Server.Controllers
                     return BadRequest();
                 }
 
-                var output = await _service.GetTableData(connectionString, tableName);
+                var output = await _client.GetTableDataAsync(connectionString, tableName);
                 if (output == null)
                 {
                     return NotFound();
@@ -75,7 +79,7 @@ namespace Server.Controllers
                     return BadRequest();
                 }
 
-                var output = await _service.GetTableDataWithQuery(connectionString, query);
+                var output = await _client.GetTableDataWithQueryAsync(connectionString, query);
                 if (output == null)
                 {
                     return NotFound();
@@ -100,7 +104,7 @@ namespace Server.Controllers
                     return BadRequest();
                 }
 
-                await _service.UpdateTableData(connectionString, tableName, tableData);
+                await _client.UpdateTableDataAsync(connectionString, tableName, tableData);
                 return Ok();
             }
             catch (Exception e)
@@ -120,7 +124,7 @@ namespace Server.Controllers
                     return BadRequest();
                 }
 
-                await _service.InsertTableData(connectionString, tableName, tableData);
+                await _client.InsertTableDataAsync(connectionString, tableName, tableData);
                 return Ok();
             }
             catch (Exception e)
@@ -140,7 +144,7 @@ namespace Server.Controllers
                     return BadRequest();
                 }
 
-                await _service.InsertRow(connectionString, tableName, row);
+                await _client.InsertRowAsync(connectionString, tableName, row);
                 return Ok();
             }
             catch (Exception e)
@@ -159,7 +163,7 @@ namespace Server.Controllers
                 return BadRequest();
             }
 
-            await _service.DeleteRow(connectionString, tableName, column, rowId);
+            await _client.DeleteRowAsync(connectionString, tableName, column, rowId);
             return Ok();
         }
     }
