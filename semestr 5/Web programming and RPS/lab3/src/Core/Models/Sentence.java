@@ -21,6 +21,13 @@ public class Sentence {
     }
 
     /**
+     * get last element of sequence
+     */
+    public Word getLast() {
+        return text.get(text.size()-1);
+    }
+
+    /**
      *  Set the sequence of words
      * @param text  sequence of words
      */

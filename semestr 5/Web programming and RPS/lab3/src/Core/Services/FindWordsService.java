@@ -27,4 +27,23 @@ public class FindWordsService {
         }
         return null;
     }
+
+    /**
+     *  Search for a word from the first sentence that does not occur in subsequent ones.
+     * @param sentences Array of sentence
+     * @return found word or null
+     */
+    public static ArrayList<Word> lengthWordOfSentence(ArrayList<Sentence> sentences, int length) {
+        Set<Word> result = new HashSet<>();
+        for (Sentence sentence : sentences) {
+            if(sentence.getLast().getText().equals("?")){
+                for (Word word : sentence.getText()) {
+                    if (word.getText().length() == length) {
+                        result.add(word);
+                    }
+                }
+            }
+        }
+        return new ArrayList<Word>(result);
+    }
 }
