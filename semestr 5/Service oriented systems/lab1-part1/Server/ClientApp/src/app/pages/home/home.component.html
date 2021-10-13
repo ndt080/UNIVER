@@ -1,0 +1,69 @@
+<div>
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label for="inputDB" class="form-label">Enter the absolute path to your database: </label>
+      <input type="text"
+             class="form-control"
+             [value]="dataSource"
+             id="inputDB"
+             formControlName="file"
+             aria-describedby="inputDBHelp">
+    </div>
+    <button type="button" class="btn btn-primary"
+            (click)="connectDB()"
+            [disabled]="fileControl.invalid && !fileControl.touched"
+    >
+      Connect
+    </button>
+
+    <ng-container *ngIf="!!tables">
+      <div class="form__inputBox">
+        <details>
+          <summary>Use the SQL query</summary>
+          <div class="mb-3">
+            <label for="queryDB" class="form-label">Enter the SQL query: </label>
+            <input type="text"
+                   class="form-control"
+                   id="queryDB"
+                   formControlName="query"
+                   aria-describedby="inputDBHelp">
+          </div>
+          <button type="button" class="btn btn-primary"
+                  (click)="executeQuery()"
+                  [disabled]="queryControl.valid && !queryControl.touched"
+          >
+            Execute
+          </button>
+        </details>
+      </div>
+
+      <div class="form__inputBox">
+        <details>
+          <summary>Select table</summary>
+          <label for="selectTable" class="form-label">Select table: </label>
+          <div class="row">
+            <div class="col mb-3">
+              <select class="form-control"
+                      id="selectTable"
+                      formControlName="selectTable"
+                      aria-describedby="selectTableHelp">
+                <option *ngFor="let table of tables" [value]="table">{{table.toUpperCase()}}</option>
+              </select>
+            </div>
+            <div class="col mb-3">
+              <button type="button" class="form-control btn btn-primary"
+                      (click)="selectTable()"
+                      [disabled]="selectTableControl.invalid && !selectTableControl.touched"
+              >Select or update table
+              </button>
+            </div>
+          </div>
+        </details>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="!!dataTable && !refresh">
+      <data-view [data]="dataTable" [saving]="true" [tableName]="selectTableControl.value"></data-view>
+    </ng-container>
+  </form>
+</div>
