@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW5. Petrov AA</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<button onclick="generatePDF()">Сохранить в PDF</button>
+<div id="container">
+  <header>
+    <h1>Домашнее задание №5</h1>
+    <h2>«Сплайн-интерполирование»</h2>
+    <p>Выполнил студент 3 курса 13 группы Петров Андрей Александрович</p>
+  </header>
+<!--  <section>-->
+<!--    <form method="GET" id="my_form"></form>-->
+
+<!--    <table>-->
+<!--      <tr>-->
+<!--        <td>x<sub>i</sub></td>-->
+<!--        <td>-->
+<!--          <input type="number" name="x0" form="my_form" value="1"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="x1" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="x2" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="x3" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="x4" form="my_form"/>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>F(x<sub>i</sub>)</td>-->
+<!--        <td>-->
+<!--          <input type="number" name="y0" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="y1" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="y2" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="y3" form="my_form"/>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--          <input type="number" name="y4" form="my_form"/>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--    <button type="button" id="btn-submit">Изменить данные</button>-->
+<!--  </section>-->
+  <div id="charts" style="max-width: 100vw;"></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/index.js" type="module"></script>
+<script>
+  let options = {
+    filename: 'HW5_PetrovAA_13gr.pdf',
+    image: {type: 'jpeg', quality: 1},
+    html2canvas: {scale: 1},
+    jsPDF: {unit: 'em', format: 'a1', compress: false, orientation: 'portrait'}
+  };
+
+  function generatePDF() {
+    const element = document.getElementById('container');
+    html2pdf().set(options).from(element).save();
+  }
+</script>
+</body>
+</html>

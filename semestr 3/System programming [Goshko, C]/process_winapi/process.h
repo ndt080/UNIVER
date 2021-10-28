@@ -8,13 +8,15 @@
 #define PROCESS_PROCESS_H
 
 
-BOOL GetProcessList( );
-BOOL ListProcessModules( DWORD dwPID );
-BOOL ListProcessThreads( DWORD dwOwnerPID );
+BOOL GetProcessList();
+
+BOOL ListProcessModules(DWORD dwPID);
+
+BOOL ListProcessThreads(DWORD dwOwnerPID);
 
 
 // structures
-typedef struct tagPROCESSINFO{
+typedef struct tagPROCESSINFO {
     char name[64];
     char ID[64];
     char parentPID[64];
@@ -37,6 +39,7 @@ typedef struct tagPROCESSINFO{
 PROCESSINFO processList[1000][1000];
 
 
-unsigned  int indPRS;
-unsigned  int indMDLS;
+unsigned int indPRS;
+unsigned int indMDLS;
 #endif //PROCESS_PROCESS_H
+

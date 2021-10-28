@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW5. Petrov AA</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<button onclick="generatePDF()">Сохранить в PDF</button>
+<div id="container">
+  <header>
+    <h1>Домашнее задание №6</h1>
+    <h2>«Сплайн-интерполирование»</h2>
+    <p>Выполнил студент 3 курса 13 группы Петров Андрей Александрович</p>
+  </header>
+  <div id="charts" style="max-width: 100vw;"></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/index.js" type="module"></script>
+<script>
+  let options = {
+    filename: 'HW5_PetrovAA_13gr.pdf',
+    image: {type: 'jpeg', quality: 1},
+    html2canvas: {scale: 1},
+    jsPDF: {unit: 'em', format: 'a1', compress: false, orientation: 'portrait'}
+  };
+
+  function generatePDF() {
+    const element = document.getElementById('container');
+    html2pdf().set(options).from(element).save();
+  }
+</script>
+</body>
+</html>

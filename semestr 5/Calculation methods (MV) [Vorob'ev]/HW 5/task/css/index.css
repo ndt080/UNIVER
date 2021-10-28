@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  padding: 50px;
+  font-size: 14px;
+}
+
+#myChart {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+header p {
+  font-size: 20px;
+  padding: 15px 0;
+}
