@@ -1,2 +1,0 @@
-NativeScript allows scaffolding projects with various templates to kickstart your app development. Official templates can be found in the Templates GitHub repository and on NPM?
-Some of the templates are listed in the NativeScript CLI when creating a new project with ns create, others may be used by passing the --template flag with the template name (NPM package name).
