@@ -1,0 +1,7 @@
+{
+  "app_name": "lab5_1",
+  "locale": "EN",
+  "server_address": "127.0.0.1",
+  "server_port": 42000,
+  "client_port": 42000
+}

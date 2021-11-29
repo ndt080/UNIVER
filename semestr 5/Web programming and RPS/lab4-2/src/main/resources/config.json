@@ -1,0 +1,9 @@
+{
+  "app_name": "lab4",
+  "locale": "RU",
+  "number_operators": 5,
+  "number_clients": 10,
+  "client_waiting_time": 100,
+  "call_center_number_try": 2,
+  "max_call_length": 1000
+}

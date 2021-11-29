@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="FileAppender" fileName="target/logs/app.log" append="true">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </File>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Server" level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="Client" level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="ServerInitThread" level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="ServerConnectionThread" level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+        <Logger name="ClientConnectionThread" level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+
+        <Root level="debug">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
