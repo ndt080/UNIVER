@@ -1,0 +1,30 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="periodicals">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Magazine" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="name" />
+                            <xs:element type="xs:double" name="coast"/>
+                            <xs:element type="xs:boolean" name="printEdition"/>
+                            <xs:element type="xs:boolean" name="electronicEdition"/>
+                            <xs:element type="xs:string" name="audience"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Newspaper" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="name" />
+                            <xs:element type="xs:double" name="coast"/>
+                            <xs:element type="xs:boolean" name="printEdition"/>
+                            <xs:element type="xs:boolean" name="electronicEdition"/>
+                            <xs:element type="xs:string" name="language"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

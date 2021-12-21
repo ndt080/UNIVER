@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<periodicals>
+    <Magazine>
+        <name>CookBook</name>
+        <coast>13.4</coast>
+        <printEdition>true</printEdition>
+        <electronicEdition>true</electronicEdition>
+        <audience>22-66</audience>
+    </Magazine>
+    <Magazine>
+        <name>Cars</name>
+        <coast>22.3</coast>
+        <printEdition>true</printEdition>
+        <electronicEdition>false</electronicEdition>
+        <audience>22-70</audience>
+    </Magazine>
+
+    <Newspaper>
+        <name>Milliyet</name>
+        <coast>10</coast>
+        <printEdition>false</printEdition>
+        <electronicEdition>false</electronicEdition>
+        <language>En-en</language>
+    </Newspaper>
+    <Newspaper>
+        <name>Financial Times</name>
+        <coast>40.5</coast>
+        <printEdition>true</printEdition>
+        <electronicEdition>true</electronicEdition>
+        <language>En-en</language>
+    </Newspaper>
+</periodicals>
