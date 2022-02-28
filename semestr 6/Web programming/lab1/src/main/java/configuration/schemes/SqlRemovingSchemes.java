@@ -2,7 +2,13 @@ package configuration.schemes;
 
 import java.util.ResourceBundle;
 
+/**
+ * SQL Data Removing Schemes
+ */
 public class SqlRemovingSchemes {
+    /**
+     * Recourse bundle
+     */
     private static final ResourceBundle resourceBundle = ResourceBundle.getBundle("sql-removing-schemes");
 
     public static String dropClientTable = resourceBundle.getString("DROP_CLIENT_TABLE");

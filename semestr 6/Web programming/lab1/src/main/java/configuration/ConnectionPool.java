@@ -8,12 +8,28 @@ import org.apache.logging.log4j.*;
 import java.sql.*;
 import java.util.concurrent.*;
 
+/**
+ * Connection pool class
+ */
 public class ConnectionPool {
+    /**
+     * Logger object
+     */
     private static final Logger logger = LogManager.getLogger(ConnectionPool.class);
 
+    /**
+     * Struct for storage connections
+     */
     static LinkedBlockingDeque<Connection> connections;
+    /**
+     * Connection poll instance
+     */
     private static ConnectionPool connectionPool;
 
+    /**
+     * Constructor of connection poll object
+     * @param connectionCount connections count
+     */
     private ConnectionPool(int connectionCount) {
         try {
             Class.forName(DatabaseSettings.DRIVER);
@@ -27,6 +43,10 @@ public class ConnectionPool {
         }
     }
 
+    /**
+     * Get current connection pool instance. Create poll if not exists
+     * @return Connection poll instance
+     */
     public static ConnectionPool getConnectionPool() {
         if (connectionPool == null) {
             connectionPool = new ConnectionPool(5);
@@ -34,6 +54,10 @@ public class ConnectionPool {
         return connectionPool;
     }
 
+    /**
+     * Close connections of poll
+     * @throws ConnectionPoolException
+     */
     public static void closeConnections() throws ConnectionPoolException {
         try {
             logger.info("Closing connections...");
@@ -49,6 +73,11 @@ public class ConnectionPool {
         }
     }
 
+    /**
+     * Create database connection
+     * @return database connections
+     * @throws ConnectionPoolException
+     */
     private Connection createConnection() throws ConnectionPoolException {
         try {
             Class.forName(DatabaseSettings.DRIVER);
@@ -61,6 +90,11 @@ public class ConnectionPool {
         }
     }
 
+    /**
+     * Get database connection
+     * @return database connection
+     * @throws ConnectionPoolException
+     */
     public synchronized Connection getConnection() throws ConnectionPoolException {
         try {
             logger.info("Connection was peeked");
@@ -70,6 +104,10 @@ public class ConnectionPool {
         }
     }
 
+    /**
+     * Free database connection
+     * @param connection database connection
+     */
     public synchronized void freeConnection(Connection connection) {
         if (connection != null) {
             logger.info("Connection was released");

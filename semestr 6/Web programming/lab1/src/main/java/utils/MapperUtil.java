@@ -7,7 +7,16 @@ import java.sql.SQLException;
 import java.util.*;
 import java.util.Date;
 
+/**
+ * Mapper Utility class
+ */
 public class MapperUtil {
+    /**
+     * Map SQL table data to entity Bet model
+     * @param result  SQL table data
+     * @return bet model object
+     * @throws SQLException
+     */
     public static Bet mapRowToBet(ResultSet result) throws SQLException {
         return new Bet(
             result.getInt("BET_ID"),
@@ -43,6 +52,12 @@ public class MapperUtil {
         );
     }
 
+    /**
+     * Map SQL table data to entity Client model
+     * @param result  SQL table data
+     * @return client model object
+     * @throws SQLException
+     */
     public static Client mapRowToClient(ResultSet result) throws SQLException {
         return new Client(
             result.getInt("ID"),
@@ -51,6 +66,12 @@ public class MapperUtil {
         );
     }
 
+    /**
+     * Map SQL table data to entity Race model
+     * @param result  SQL table data
+     * @return race model object
+     * @throws SQLException
+     */
     public static Race mapRowToRace(ResultSet result) throws SQLException {
         Race race = new Race(
             result.getInt("RACE_ID"),
@@ -68,6 +89,12 @@ public class MapperUtil {
         return race;
     }
 
+    /**
+     * Map SQL table data to Participants of entity Race model
+     * @param result  SQL table data
+     * @return Participants of entity Race model
+     * @throws SQLException
+     */
     public static List<Horse> mapRowsToParticipants(ResultSet result) throws SQLException {
         List<Horse> participants = new ArrayList<Horse>();
         for (String row: (String[]) result.getArray("RACE_PARTICIPANTS").getArray()) {

@@ -18,7 +18,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class BetDAO implements DAO<Bet> {
+    /**
+     * Logger
+     */
     private static final Logger logger = LogManager.getLogger(BetDAO.class);
+    /**
+     * Connection pool instance
+     */
     ConnectionPool connectionPool;
 
     public BetDAO() {

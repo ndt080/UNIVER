@@ -12,7 +12,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+
+/**
+ * Console application class
+ */
 public class ConsoleApplication {
+    /**
+     * Logger object
+     */
     private static final Logger logger = LogManager.getLogger(ConsoleApplication.class);
     static AdminDAO adminDAO;
     static ClientDAO clientDAO;
@@ -20,6 +27,9 @@ public class ConsoleApplication {
     static RaceDAO raceDAO;
     static BetDAO betDAO;
 
+    /**
+     * Initialize DAOs instances
+     */
     private static void initDAOs() {
         adminDAO = new AdminDAO();
         clientDAO = new ClientDAO();
@@ -28,6 +38,10 @@ public class ConsoleApplication {
         betDAO = new BetDAO();
     }
 
+    /**
+     * Create database tables if not exists
+     * @throws DAOException
+     */
     private static void createTables() throws DAOException {
         adminDAO.createTable();
         clientDAO.createTable();
@@ -36,6 +50,10 @@ public class ConsoleApplication {
         betDAO.createTable();
     }
 
+    /**
+     * Create new client
+     * @throws DAOException
+     */
     private static void registerNewClient() throws DAOException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter client last name: ");
@@ -47,6 +65,11 @@ public class ConsoleApplication {
         clientDAO.insert(new Client(0, clientLastName, clientName));
     }
 
+    /**
+     * Print Races by date
+     * @throws DAOException
+     * @throws ParseException
+     */
     private static void printRacesByDate() throws DAOException, ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         Scanner scanner = new Scanner(System.in);
@@ -54,6 +77,11 @@ public class ConsoleApplication {
         printList(raceDAO.getByDate(formatter.parse(scanner.nextLine())));
     }
 
+    /**
+     * Print horses by race ID
+     * @throws DAOException
+     * @throws ParseException
+     */
     private static void printHorsesByRaceId() throws DAOException, ParseException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter race ID: ");
@@ -61,6 +89,11 @@ public class ConsoleApplication {
         printList(horseDAO.getByRaceId(Integer.parseInt(scanner.nextLine())));
     }
 
+    /**
+     * Print winning race clients
+     * @throws DAOException
+     * @throws ParseException
+     */
     private static void printWinningRaceClients() throws DAOException, ParseException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter race ID: ");
@@ -68,6 +101,10 @@ public class ConsoleApplication {
         printList(clientDAO.getWinnerClientsByRaceId(Integer.parseInt(scanner.nextLine())));
     }
 
+    /**
+     * Print list
+     * @param list
+     */
     private static void printList(Collection list) {
         for (Object row: list) {
             System.out.println(row);
@@ -153,10 +190,5 @@ public class ConsoleApplication {
             logger.error(e.getMessage());
             e.printStackTrace();
         }
-
-
-//        Вывести список выигравших клиентов забега.
-//        Зафиксировать состав и результаты забега.
-
     }
 }

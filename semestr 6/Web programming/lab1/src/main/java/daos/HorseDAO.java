@@ -11,7 +11,13 @@ import java.util.*;
 
 
 public class HorseDAO implements DAO<Horse> {
+    /**
+     * Logger
+     */
     private static final Logger logger = LogManager.getLogger(HorseDAO.class);
+    /**
+     * Connection pool instance
+     */
     ConnectionPool connectionPool;
 
     public HorseDAO() { connectionPool = ConnectionPool.getConnectionPool(); }

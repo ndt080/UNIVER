@@ -12,7 +12,13 @@ import java.util.*;
 
 
 public class ClientDAO implements DAO<Client> {
+    /**
+     * Logger
+     */
     private static final Logger logger = LogManager.getLogger(ClientDAO.class);
+    /**
+     * Connection pool instance
+     */
     ConnectionPool connectionPool;
 
     public ClientDAO() {

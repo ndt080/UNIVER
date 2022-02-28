@@ -9,10 +9,23 @@ import org.apache.logging.log4j.*;
 import java.sql.*;
 import java.util.*;
 
+
+/**
+ * Admin DAO class
+ */
 public class AdminDAO implements DAO<Admin> {
+    /**
+     * Logger
+     */
     private static final Logger logger = LogManager.getLogger(AdminDAO.class);
+    /**
+     * Connection pool instance
+     */
     ConnectionPool connectionPool;
 
+    /**
+     * Admin DAO object constructor
+     */
     public AdminDAO() { connectionPool = ConnectionPool.getConnectionPool(); }
 
     @Override

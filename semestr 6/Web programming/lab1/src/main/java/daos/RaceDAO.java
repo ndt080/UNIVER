@@ -13,7 +13,13 @@ import java.util.Date;
 
 
 public class RaceDAO implements DAO<Race> {
+    /**
+     * Logger
+     */
     private static final Logger logger = LogManager.getLogger(RaceDAO.class);
+    /**
+     * Connection pool instance
+     */
     ConnectionPool connectionPool;
 
     public RaceDAO() {

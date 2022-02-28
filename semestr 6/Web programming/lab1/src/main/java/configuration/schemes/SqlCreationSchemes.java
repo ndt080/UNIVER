@@ -2,7 +2,13 @@ package configuration.schemes;
 
 import java.util.ResourceBundle;
 
+/**
+ * SQL Data Creation Schemes
+ */
 public class SqlCreationSchemes {
+    /**
+     * Recourse bundle
+     */
     private static final ResourceBundle resourceBundle = ResourceBundle.getBundle("sql-creation-schemes");
 
     public static String createClientTable = resourceBundle.getString("CREATE_CLIENT_TABLE");

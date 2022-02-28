@@ -2,7 +2,13 @@ package configuration.schemes;
 
 import java.util.ResourceBundle;
 
+/**
+ * SQL Data Selection Schemes
+ */
 public class SqlSelectionSchemes {
+    /**
+     * Recourse bundle
+     */
     private static final ResourceBundle resourceBundle = ResourceBundle.getBundle("sql-selection-schemes");
 
     public static String selectAllClients = resourceBundle.getString("SELECT_ALL_CLIENTS");

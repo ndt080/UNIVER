@@ -2,7 +2,13 @@ package configuration.schemes;
 
 import java.util.*;
 
+/**
+ * SQL Data Insertion Schemes
+ */
 public class SqlInsertionSchemes {
+    /**
+     * Recourse bundle
+     */
     private static final ResourceBundle resourceBundle = ResourceBundle.getBundle("sql-insertion-schemes");
 
     public static String insertClient = resourceBundle.getString("INSERT_CLIENT");
