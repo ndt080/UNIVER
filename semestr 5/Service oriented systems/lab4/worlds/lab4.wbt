@@ -3,13 +3,53 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.7 0.7 0.2 0.75
-  position 1.2 1.6 2.3
-
+  orientation -0.7603604566220393 0.6083958480051739 0.22739056298709884 0.8861691093095078
+  position 0.6195900025011231 0.8271211007798929 1.2440892472744505
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  translation 0 -0.65 0
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+E-puck {
+  hidden position_0_0 91.52488120442095
+  hidden position_0_1 105.72839445575288
+  hidden linearVelocity_0 0.014240507050425821 3.1008463471317427e-09 0.023201762207656615
+  hidden angularVelocity_0 -0.0021847430737411203 -0.015029377888934135 0.0013353772839918665
+  hidden rotation_1 -1 0 0 3.5602869039067393
+  hidden linearVelocity_1 0.01444028048067301 -1.3309100519435955e-07 0.023524916607997978
+  hidden angularVelocity_1 1.1775769993151781 -0.015011134262207326 -0.7227592191197904
+  hidden rotation_2 -1 0 0 5.197429540879494
+  hidden linearVelocity_2 0.014027407241709417 1.323256608731281e-07 0.0228567640984475
+  hidden angularVelocity_2 1.1413477668307819 -0.01501102263073231 -0.7005270744878054
+  translation -0.37106731328703657 -0.6500639648846069 0.12911422295632183
+  rotation -3.361832450475818e-05 0.9999999927094309 -0.00011597821463564779 -2.591657857346486
+  controller "lab4_controller_c"
+}
+CardboardBox {
+  translation -0.245783 -0.49 -0.23428
+  rotation 0 1 0 -0.523595307179586
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation 0.0235643 -0.6 0.279185
+  rotation 0 1 0 -0.523595307179586
+  name "cardboard box(3)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.192124 -0.6 -0.307224
+  rotation 0 1 0 -0.523595307179586
+  name "cardboard box(1)"
+  size 0.1 0.1 0.1
+}
+CardboardBox {
+  translation -0.285783 -0.6 -0.165
+  rotation 0 1 0 -0.523595307179586
+  name "cardboard box(2)"
+  size 0.1 0.1 0.1
 }

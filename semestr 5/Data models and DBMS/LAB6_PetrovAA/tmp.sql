@@ -1,0 +1,4 @@
+DELETE
+FROM RECEPTION
+WHERE COURSE_ID = '${courseId}'
+  AND DATETIME LIKE '${date}%'
