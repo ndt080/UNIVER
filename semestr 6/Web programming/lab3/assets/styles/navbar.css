@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.navbar__item {
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.navbar__item a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+.navbar__item:hover a {
+  color: #43a0ff;
+  transition: all 0.5s;
+}
+.navbar__item:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=navbar.css.map */
