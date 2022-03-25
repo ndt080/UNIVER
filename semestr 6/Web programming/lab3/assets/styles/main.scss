@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: $font-family;
 }
 
 .layout {
@@ -17,13 +18,4 @@
 
   border-radius: $main-round;
   margin: 0 10px;
-}
-
-.layout .main.home-preview {
-  background: linear-gradient(90deg, rgba(255, 160, 51, 0.9), rgba(228, 35, 28, 0.6)),  url(" ../img/home_preview.jpg") no-repeat;
-  background-position: 50% 30%;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 }

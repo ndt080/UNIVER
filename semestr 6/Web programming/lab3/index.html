@@ -4,33 +4,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XBet</title>
     <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/pages/home.css">
     <link rel="stylesheet" href="assets/styles/navbar.css">
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
 </head>
 
-<body class="layout">
-<!-- ################## HEADER BLOCK ##################-->
+<body class="layout" onload="generateNavigationBar(NavigationItems)">
+<!-- ########## HEADER BLOCK ##########-->
 <header class="header">
-    <div class="header__logo title-semi-32">
+    <div class="header__logo title-semi-32" id="logo">
         <img class="header__logo_img" src="assets/img/icons/horse.svg" alt="logo"/>
         XBet
     </div>
     <nav class="navbar" id="navbar"></nav>
+    <div class="navbar__button" id="navbar-btn"><div></div></div>
 </header>
 
-<!-- ################## MAIN BLOCK ##################-->
+<!-- ########## MAIN BLOCK ##########-->
 <main class="main home-preview">
+    <div class="home-page home-preview__title">
+        <div class="home-preview__top_container">
+            <h1>Бонус <span style="color: rgb(255,216,0)">20 BYN</span> всем новым клиентам</h1>
+        </div>
+        <div class="home-preview__bottom_container">
+            <h1>С большими выигрышами <br> приходит большая ответственность</h1>
+        </div>
+    </div>
 
 </main>
 
-<!-- ################## FOOTER BLOCK ##################-->
+<!-- ########## FOOTER BLOCK ##########-->
 <footer class="footer title-regular-14">
     <p>Copyright ©2022 All rights reserved </p>
     <p>Developed by Andrei Petrov</p>
 </footer>
 
-<!-- ################## SCRIPTS BLOCK ##################-->
+<!-- ########## SCRIPTS BLOCK ##########-->
 <script src="assets/js/index.js"></script>
 <script src="assets/js/navigation/navigation.js"></script>
 </body>

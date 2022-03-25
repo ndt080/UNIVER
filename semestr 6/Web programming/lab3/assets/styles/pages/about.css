@@ -56,22 +56,10 @@
   line-height: 48px;
 }
 
-*, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: "Montserrat", sans-serif;
-}
-
-.layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+.about-page {
+  background: #ebebeb;
+  padding: 50px;
   min-height: 100%;
 }
 
-.layout .main {
-  border-radius: 30px;
-  margin: 0 10px;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=about.css.map */

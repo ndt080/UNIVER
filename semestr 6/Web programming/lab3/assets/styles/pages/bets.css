@@ -56,22 +56,66 @@
   line-height: 48px;
 }
 
-*, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: "Montserrat", sans-serif;
+.form__group {
+  padding: 8px;
+}
+.form .form__input {
+  border-radius: 6px;
+  padding: 5px;
+}
+.form .form__error_message {
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 6px;
+  font-size: 12px;
+  color: red;
+}
+.form .form__input.form__input--error {
+  border-color: red;
+  outline-color: red;
+}
+.form .form__button {
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
 }
 
-.layout {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+.bets-page {
+  background: #ebebeb;
+  padding: 50px;
   min-height: 100%;
 }
 
-.layout .main {
-  border-radius: 30px;
-  margin: 0 10px;
+.bets-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  padding: 12px;
+}
+.bets-form .form__group {
+  margin-right: 10px;
+}
+.bets-form .form__input {
+  border-radius: 6px;
+  padding: 5px;
+  margin-left: 10px;
 }
 
-/*# sourceMappingURL=main.css.map */
+.bets-table {
+  margin-top: 20px;
+}
+.bets-table__header {
+  border-bottom: 2px solid #6678b1;
+}
+.bets-table__col {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  word-break: normal;
+  line-break: auto;
+  hyphens: manual;
+  padding: 5 15px;
+}
+
+/*# sourceMappingURL=bets.css.map */
