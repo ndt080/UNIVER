@@ -1,0 +1,108 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.navbar__item {
+  padding: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.navbar__item a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+.navbar__item:hover a {
+  color: #43a0ff;
+  transition: all 0.5s;
+}
+.navbar__item:last-child {
+  margin-right: 0;
+}
+
+.navbar__button {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  padding: 15px 0;
+}
+.navbar__button div, .navbar__button div::before, .navbar__button div::after {
+  display: block;
+  border-radius: 4px;
+  width: 30px;
+  height: 3px;
+  background-color: #0a0a0a;
+}
+.navbar__button div {
+  position: relative;
+}
+.navbar__button div::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+}
+.navbar__button div::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+}
+.navbar__button.active div {
+  height: 0;
+}
+.navbar__button.active div::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: transform 0.5s;
+}
+.navbar__button.active div::after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar__list {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .navbar__button {
+    display: block;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+  .navbar.active .navbar__list {
+    position: fixed;
+    top: 65px;
+    right: 10px;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: white;
+    visibility: visible;
+    opacity: 1;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */
