@@ -1,0 +1,41 @@
+@import '../_vars.css';
+@import '../font';
+@import '../forms';
+
+
+.auth-page {
+  background: #ebebeb;
+  padding: 50px;
+  min-height: 100%;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  padding: 12px;
+
+  .form__group {
+    margin-right: 10px;
+  }
+
+  .form__input {
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+}
+
+.page-error {
+  padding: 16px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  margin-bottom: 16px;
+
+  &__title {
+    color: rgb(247, 114, 73);
+  }
+}
