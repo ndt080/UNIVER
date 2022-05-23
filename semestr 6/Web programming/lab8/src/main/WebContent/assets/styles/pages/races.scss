@@ -1,0 +1,57 @@
+@import '../_vars.css';
+@import '../font';
+@import '../forms';
+
+
+.races-page {
+  background: #ebebeb;
+  padding: 50px;
+  min-height: 100%;
+}
+
+.races-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  padding: 12px;
+
+  .form__group {
+    margin-right: 10px;
+  }
+
+  .form__input {
+    border-radius: 6px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+}
+
+.races-table {
+  margin-top: 20px;
+
+  &__header {
+    border-bottom: 2px solid #6678b1;
+  }
+
+  &__col {
+    overflow-wrap: normal;
+    word-wrap: normal;
+    word-break: normal;
+    line-break: auto;
+    hyphens: manual;
+    padding: 5px 15px;
+  }
+}
+
+.page-error {
+  padding: 16px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  margin-bottom: 16px;
+
+  &__title {
+    color: rgb(247, 114, 73);
+  }
+}

@@ -1,0 +1,29 @@
+.form {
+  &__group {
+    padding: 8px;
+  }
+
+  .form__input {
+    border-radius: 6px;
+    padding: 5px;
+  }
+
+  .form__error_message {
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 6px;
+    font-size: 12px;
+    color: red;
+  }
+
+  .form__input.form__input--error {
+    border-color: red;
+    outline-color: red;
+  }
+
+  .form__button {
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+}

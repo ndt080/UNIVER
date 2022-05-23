@@ -1,0 +1,27 @@
+.layout .header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px; }
+  .layout .header__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 800;
+    cursor: pointer; }
+    .layout .header__logo_img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px; }
+
+.page-error {
+  padding: 16px;
+  background-color: #d4d4d4;
+  border-radius: 12px;
+  margin-bottom: 16px; }
+  .page-error__title {
+    color: #f77249; }
